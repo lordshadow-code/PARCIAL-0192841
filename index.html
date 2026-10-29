@@ -3,19 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi página</title>
+  <title>Explore Sidebar</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Bienvenido</h1>
-  </header>
+  <aside class="sidebar">
+    <div class="top-bar">
+      <div class="window-controls" aria-hidden="true">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <span class="explore-title">Explore</span>
+    </div>
 
-  <main>
-    
-  </main>
+    <nav class="menu" aria-label="Explore navigation">
+      <a class="menu-item active" href="#">
+        <span class="icon">⌂</span>
+        <span>Home</span>
+      </a>
+      <a class="menu-item" href="#">
+        <span class="icon">♫</span>
+        <span>Music</span>
+      </a>
+      <a class="menu-item" href="#">
+        <span class="icon">♟</span>
+        <span>Gaming</span>
+      </a>
+      <a class="menu-item" href="#">
+        <span class="icon">◈</span>
+        <span>Education</span>
+      </a>
+      <a class="menu-item" href="#">
+        <span class="icon">⚛</span>
+        <span>Science &amp; Tech</span>
+      </a>
+      <a class="menu-item" href="#">
+        <span class="icon">●</span>
+        <span>Entertainment</span>
+      </a>
+      <a class="menu-item" href="#">
+        <span class="icon">▣</span>
+        <span>Student Hubs</span>
+      </a>
+    </nav>
 
-  <footer>
-    <p>&copy; 2026</p>
-  </footer>
+    <div class="sidebar-bottom">
+      <div class="bottom-controls">
+        <a class="profile" href="#" aria-label="Profile">
+          <span class="profile-mark">⌁</span>
+          <span>Juan</span>
+        </a>
+        <button class="control-button" aria-label="Home">⌂</button>
+        <button class="control-button" aria-label="Notifications">♧</button>
+        <button class="control-button" aria-label="Games">♟</button>
+      </div>
+    </div>
+  </aside>
 </body>
 </html>

@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-msedge",
+            "request": "launch",
+            "name": "Abrir barra lateral",
+            "url": "http://127.0.0.1:8080/index.html",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "Iniciar servidor local"
+        }
+    ]
+}
