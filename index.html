@@ -18,7 +18,7 @@
     </div>
 
     <nav class="menu" aria-label="Explore navigation">
-      <a class="menu-item active" href="#">
+      <a class="menu-item active" href="#" aria-current="page">
         <span class="icon">⌂</span>
         <span>Home</span>
       </a>
@@ -60,5 +60,19 @@
       </div>
     </div>
   </aside>
+
+  <script>
+    document.querySelectorAll(".menu-item").forEach((item) => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+        document.querySelectorAll(".menu-item").forEach((menuItem) => {
+          menuItem.classList.remove("active");
+          menuItem.removeAttribute("aria-current");
+        });
+        item.classList.add("active");
+        item.setAttribute("aria-current", "page");
+      });
+    });
+  </script>
 </body>
 </html>
