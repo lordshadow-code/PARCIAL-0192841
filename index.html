@@ -3,76 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore Sidebar</title>
+  <title>Explore — Community Hub</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <aside class="sidebar">
-    <div class="top-bar">
-      <div class="window-controls" aria-hidden="true">
-        <span class="dot dot-red"></span>
-        <span class="dot dot-yellow"></span>
-        <span class="dot dot-green"></span>
+  <div class="app-shell">
+    <aside class="left-sidebar">
+      <div class="brand-row">
+        <div class="brand-mark">◈</div>
+        <span>Explore</span>
       </div>
-      <span class="explore-title">Explore</span>
-    </div>
 
-    <nav class="menu" aria-label="Explore navigation">
-      <a class="menu-item active" href="#" aria-current="page">
-        <span class="icon">⌂</span>
-        <span>Home</span>
-      </a>
-      <a class="menu-item" href="#">
-        <span class="icon">♫</span>
-        <span>Music</span>
-      </a>
-      <a class="menu-item" href="#">
-        <span class="icon">♟</span>
-        <span>Gaming</span>
-      </a>
-      <a class="menu-item" href="#">
-        <span class="icon">◈</span>
-        <span>Education</span>
-      </a>
-      <a class="menu-item" href="#">
-        <span class="icon">⚛</span>
-        <span>Science &amp; Tech</span>
-      </a>
-      <a class="menu-item" href="#">
-        <span class="icon">●</span>
-        <span>Entertainment</span>
-      </a>
-      <a class="menu-item" href="#">
-        <span class="icon">▣</span>
-        <span>Student Hubs</span>
-      </a>
-    </nav>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="nav-item active" href="#home"><span class="nav-icon">⌂</span>Home</a>
+        <a class="nav-item" href="#music"><span class="nav-icon">♫</span>Music</a>
+        <a class="nav-item" href="#gaming"><span class="nav-icon">🎮</span>Gaming</a>
+        <a class="nav-item" href="#education"><span class="nav-icon">▤</span>Education</a>
+        <a class="nav-item" href="#science"><span class="nav-icon">⚙</span>Science &amp; Tech</a>
+        <a class="nav-item" href="#entertainment"><span class="nav-icon">◉</span>Entertainment</a>
+        <a class="nav-item" href="#students"><span class="nav-icon">▦</span>Student Hubs</a>
+      </nav>
 
-    <div class="sidebar-bottom">
-      <div class="bottom-controls">
-        <a class="profile" href="#" aria-label="Profile">
-          <span class="profile-mark">⌁</span>
-          <span>Juan</span>
-        </a>
-        <button class="control-button" aria-label="Home">⌂</button>
-        <button class="control-button" aria-label="Notifications">♧</button>
-        <button class="control-button" aria-label="Games">♟</button>
+      <div class="sidebar-spacer"></div>
+      <div class="voice-panel">
+        <div class="waveform" aria-label="Audio activity">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
       </div>
-    </div>
-  </aside>
+      <div class="account-row">
+        <div class="mini-avatar avatar-purple">✦</div>
+        <span class="username">lordshadow</span>
+        <button class="icon-button" aria-label="Micrófono">♩</button>
+        <button class="icon-button" aria-label="Auriculares">♧</button>
+        <button class="icon-button" aria-label="Ajustes">⚙</button>
+      </div>
+    </aside>
 
-  <script>
-    document.querySelectorAll(".menu-item").forEach((item) => {
-      item.addEventListener("click", (event) => {
-        event.preventDefault();
-        document.querySelectorAll(".menu-item").forEach((menuItem) => {
-          menuItem.classList.remove("active");
-          menuItem.removeAttribute("aria-current");
-        });
-        item.classList.add("active");
-        item.setAttribute("aria-current", "page");
-      });
-    });
-  </script>
+    <aside class="server-rail" aria-label="Comunidades">
+      <div class="server-logo selected">◉</div>
+      <div class="server-logo aqua">♨</div>
+      <div class="server-logo gold">✺</div>
+      <div class="server-logo photo">◆</div>
+      <div class="server-logo violet">◈</div>
+      <button class="add-server" aria-label="Añadir comunidad">+</button>
+    </aside>
+
+    <main class="main-content" id="home">
+      <header class="topbar">
+        <div class="mobile-brand">Explore</div>
+        <label class="search-box">
+          <span>⌕</span>
+          <input type="search" placeholder="Explore communities..." aria-label="Buscar comunidades">
+        </label>
+        <div class="top-actions">
+          <button class="icon-button" aria-label="Vista">▣</button>
+          <button class="icon-button" aria-label="Notificaciones">♧</button>
+          <button class="icon-button" aria-label="Mensajes">▱</button>
+          <button class="icon-button" aria-label="Configuración">⚙</button>
+        </div>
+      </header>
+
+      <div class="content-inner">
+        <section class="hero-banner">
+          <div class="hero-shape shape-one"></div>
+          <div class="hero-shape shape-two"></div>
+          <div class="hero-copy">
+            <p class="eyebrow">DISCOVER YOUR PEOPLE</p>
+            <h1>Find Your Community<br>on Daccord</h1>
+            <p>Meet people who share your interests.</p>
+            <a class="hero-button" href="#featured">Explore communities <span>→</span></a>
+          </div>
+          <div class="hero-orb orb-one"></div>
+          <div class="hero-orb orb-two"></div>
+        </section>
+
+        <section class="content-section" id="featured">
+          <div class="section-heading">
+            <h2>Featured Community</h2>
+            <a href="#featured">See all <span>→</span></a>
+          </div>
+          <div class="community-grid">
+            <article class="community-card">
+              <div class="card-art art-vr"><span class="art-label">VR / AR</span><div class="art-ring"></div><div class="art-cube">◇</div></div>
+              <div class="card-body">
+                <div class="card-title-row"><h3>Virtual Reality</h3><span class="online-dot"></span></div>
+                <p>A community for VR and novices alike, regular and friendly chat.</p>
+                <div class="card-meta"><span>● 2 Online</span><span>♧ 2 Members</span></div>
+              </div>
+            </article>
+            <article class="community-card">
+              <div class="card-art art-game"><span class="controller">⌘</span><div class="art-spark">✦</div></div>
+              <div class="card-body">
+                <div class="card-title-row"><h3>Game Play</h3><span class="online-dot"></span></div>
+                <p>A way's new challenge. Great place to make new friends.</p>
+                <div class="card-meta"><span>● 2 Online</span><span>♧ 2 Members</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <h2>Popular Right Now</h2>
+            <a href="#popular">See all <span>→</span></a>
+          </div>
+          <div class="community-grid">
+            <article class="community-card horizontal-card" id="popular">
+              <div class="small-art art-3d"><span>◈</span></div>
+              <div class="horizontal-body">
+                <h3>3D Art</h3>
+                <p>A great place to discuss art.</p>
+                <div class="card-meta"><span>♧ 2 Members</span></div>
+              </div>
+            </article>
+            <article class="community-card horizontal-card">
+              <div class="small-art art-nft"><span>♜</span></div>
+              <div class="horizontal-body">
+                <h3>NFT</h3>
+                <p>An NFT community so that everyone can share their NFT's.</p>
+                <div class="card-meta"><span>♧ 2 Members</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <h2>Recent Add</h2>
+            <a href="#recent">See all <span>→</span></a>
+          </div>
+          <div class="recent-grid" id="recent">
+            <article class="recent-card recent-one"><span class="recent-icon">✧</span><div><h3>Digital Creators</h3><p>Design, share, create.</p></div></article>
+            <article class="recent-card recent-two"><span class="recent-icon">⌘</span><div><h3>Neon Arcade</h3><p>Play together.</p></div></article>
+            <article class="recent-card recent-three"><span class="recent-icon">✦</span><div><h3>Cosmic Club</h3><p>Explore the unknown.</p></div></article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <aside class="right-sidebar">
+      <div class="profile-top-actions"><button class="icon-button" aria-label="Opciones">•••</button></div>
+      <div class="profile-card">
+        <div class="profile-art"><div class="profile-hex">✦</div><div class="profile-person">S</div></div>
+        <h2>Lord Shadow</h2>
+        <p class="handle">@lordshadow</p>
+      </div>
+
+      <section class="right-section">
+        <div class="right-heading"><h3>New Members</h3><a href="#members">See all</a></div>
+        <div class="member-list" id="members">
+          <div class="member-row"><div class="member-avatar member-one">A</div><div><strong>Anne Couture</strong><small>5 min ago</small></div><span class="member-status"></span></div>
+          <div class="member-row"><div class="member-avatar member-two">M</div><div><strong>Miriam Soleil</strong><small>20 min ago</small></div><span class="member-status"></span></div>
+          <div class="member-row"><div class="member-avatar member-three">M</div><div><strong>Marie Laval</strong><small>35 min ago</small></div><span class="member-status"></span></div>
+          <div class="member-row"><div class="member-avatar member-four">M</div><div><strong>Mark Morain</strong><small>40 min ago</small></div><span class="member-status"></span></div>
+        </div>
+      </section>
+
+      <section class="right-section activity-section">
+        <div class="right-heading"><h3>Recent Activity</h3><a href="#activity">See all</a></div>
+        <div class="activity-list" id="activity">
+          <div class="activity-row"><div class="activity-avatar activity-a">♟</div><p><strong>Hola Spine</strong> invited you to join a channel<small>2 min ago</small></p></div>
+          <div class="activity-row"><div class="activity-avatar activity-b">✿</div><p><strong>Eva Solain</strong> invited you to a chat<small>20 min ago</small></p></div>
+          <div class="activity-row"><div class="activity-avatar activity-c">✦</div><p><strong>Pierre Ford</strong> started a conversation<small>1 hr ago</small></p></div>
+        </div>
+      </section>
+    </aside>
+  </div>
 </body>
 </html>
